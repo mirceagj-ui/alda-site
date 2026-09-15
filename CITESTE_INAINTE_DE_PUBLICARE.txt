@@ -1,0 +1,11 @@
+ALDA – VARIANTA CORECTATĂ PENTRU NETLIFY
+
+Corectări:
+- eliminate câmpurile „Banca: [DE COMPLETAT]”;
+- eliminate butoanele inactive „Donează în LEI/EURO”;
+- eliminat mesajul provizoriu de dinaintea lansării;
+- păstrate beneficiarul și IBAN-urile RON/EUR;
+- introdus mesaj public de mulțumire și explicația pentru transfer bancar.
+
+Pentru actualizare: în Netlify > Production deploys, trage acest ZIP în caseta de upload.
+Așteaptă până apare Production – Published.
