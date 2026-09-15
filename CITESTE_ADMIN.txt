@@ -1,0 +1,11 @@
+ALDA – administrare
+
+1. Încarcă toate fișierele acestui pachet în repository-ul GitHub mirceagj-ui/alda-site, înlocuind fișierele existente.
+2. Netlify va publica automat modificarea.
+3. Panoul va fi la /admin/ și butonul „Administrare” va apărea în meniul site-ului.
+4. Pentru autentificare trebuie configurat GitHub ca OAuth provider în Netlify. Nu publica niciodată Client Secret în GitHub sau în site.
+
+Panoul gestionează:
+- Noutăți
+- Comunicate de presă
+- Acțiuni în Justiție (informații publice, fără documente de descărcat)

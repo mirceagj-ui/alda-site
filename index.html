@@ -19,7 +19,7 @@
 
 .pressHero{min-height:390px;background:linear-gradient(120deg,#123b29,#27724d);color:#fff;display:flex;align-items:center;padding:70px 7vw}.pressHero>div{max-width:850px}.pressHero h1{font-size:clamp(48px,7vw,82px);margin:14px 0}.pressHero p{font-size:20px;line-height:1.6}.pressPage{max-width:1150px}.pressGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}.pressCard{background:#fff;border:1px solid #dce8df;border-radius:22px;padding:27px;box-shadow:0 10px 32px #17382a0d}.pressMeta{display:flex;justify-content:space-between;gap:15px;color:#648073;font-size:12px;font-weight:900;text-transform:uppercase}.pressCard h3{font-size:27px;line-height:1.15}.pressCard h3 a{color:#17382a;text-decoration:none}.pressCard p{line-height:1.65}.readMore{color:#167643;font-weight:900;text-decoration:none}.pressPolicy,.pressDisclaimer{margin-top:35px;background:#f0f7ed;padding:22px;border-radius:17px;line-height:1.6}.pressByline{color:#63776c;font-weight:700;margin:15px 0 25px}@media(max-width:750px){.pressGrid{grid-template-columns:1fr}}
 </style></head><body><header><a class="brand" href="#"><img src="assets/logo.png" alt="ALDA"><b>ALDA</b></a><button class="menu">☰</button>
-<nav><a href="#despre">Despre</a><a href="#misiuni">Misiuni</a><a href="#noutati">Noutăți</a><a href="#justitie">Acțiuni în Justiție</a><a href="#presa">Comunicate</a><a href="#muzica">Muzică</a><a href="#donatii">Donează</a></nav></header><main>
+<nav><a href="#despre">Despre</a><a href="#misiuni">Misiuni</a><a href="#noutati">Noutăți</a><a href="#justitie">Acțiuni în Justiție</a><a href="#presa">Comunicate</a><a href="#muzica">Muzică</a><a href="#donatii">Donează</a><a class="adminlink" href="/admin/">Administrare</a></nav></header><main>
 <section class="hero"><img src="assets/hero.png" alt="ALDA și prietenii"><div class="shade"></div>
 <div class="heroText"><span class="tag">ANIMALE • NATURĂ • OAMENI • VIITOR</span><h1>Lumea are nevoie de noi!</h1>
 <p>ALDA transformă grija pentru animale, natură și oameni în povești, muzică și acțiuni care aduc comunitatea împreună.</p>
@@ -38,11 +38,8 @@
 
 <section class="wide"><img src="assets/community.png" alt="ALDA ajută comunitatea"></section>
 
-<section id="noutati" class="section"><div class="heading"><div><span class="tag green">JURNAL ALDA</span><h2>Noutăți și campanii</h2></div><a class="smallbtn" href="#admin-demo">+ Publică</a></div>
-<div class="posts">
-<article class="post"><img src="assets/community.png" alt=""><div class="inside"><span class="cat">Campanie</span>
-<h3>Bine ai venit în Jurnalul ALDA</h3><p>Aici vor apărea noutățile, acțiunile și campaniile ALDA.</p><time>15.09.2026</time></div></article>
-</div></section>
+<section id="noutati" class="section"><div class="heading"><div><span class="tag green">JURNAL ALDA</span><h2>Noutăți și campanii</h2></div></div>
+<div class="posts" id="alda-news"></div></section>
 
 <section id="muzica" class="section dark"><span class="tag lime">MUZICA ALDA</span><h2>Cântecele aventurii</h2>
 <div class="tracks"><article><h3>🎵 ALDA – Hai cu noi</h3><audio controls preload="metadata" src="assets/alda-hai-cu-noi.mp3"></audio></article>
@@ -103,14 +100,21 @@
 <h1>Acțiuni în Justiție</h1><p>ALDA utilizează mijloacele legale pentru apărarea interesului public, a mediului, animalelor și comunităților.</p></div></section>
 <section class="section"><div class="legalNotice"><b>Informare publică</b><p>Această secțiune are exclusiv caracter informativ. ALDA nu publică cereri de chemare în judecată, întâmpinări, probe, înscrisuri, contracte, strategii juridice sau alte acte procedurale și nu oferă posibilitatea descărcării acestora.</p></div>
 <span class="tag green">REGISTRU INFORMATIV</span><h2>Dosarele ALDA</h2>
-<article class="caseCard"><div class="caseTop"><span class="caseStatus">Exemplu</span><span>Act administrativ</span></div><h3>Dosar EXEMPLU/2026</h3>
-<dl><div><dt>Instanță</dt><dd>Instanța competentă</dd></div><div><dt>Obiect</dt><dd>Exemplu de obiect al acțiunii</dd></div>
-<div><dt>Autoritate / instituție</dt><dd>Autoritate / instituție</dd></div><div><dt>Data inițierii</dt><dd>15.09.2026</dd></div></dl>
-<p class="caseSummary">Acesta este un exemplu de prezentare. Pe site-ul public va fi înlocuit cu informațiile reale pe care ALDA decide să le comunice.</p></article></section>
+<div id="alda-cases"></div></section>
 
 <section id="presa" class="pressHero"><div><span class="tag lime">ALDA • PRESĂ • INFORMARE PUBLICĂ</span><h1>Comunicate de presă</h1>
 <p>Poziții oficiale, reacții publice, campanii și informații despre demersurile ALDA.</p></div></section>
 <section class="section pressPage"><span class="tag green">CENTRU MEDIA</span><h2>Ultimele comunicate</h2>
-<div class="pressGrid"><article class="pressCard"><div class="pressMeta"><span>Informare</span><time>15.09.2026</time></div>
-<h3>Bine ai venit în Centrul Media ALDA</h3><p>Aici vor fi publicate comunicatele și pozițiile oficiale ALDA.</p><span class="readMore">Comunicat demonstrativ</span></article></div></section>
-</main><footer><div><b>ALDA</b><p>Împreună pentru o lume mai bună.</p></div><div>Animale • Natură • Oameni • Viitor</div><div>© 2026 ALDA</div></footer><script>const b=document.querySelector('.menu'),n=document.querySelector('nav');if(b){b.onclick=()=>n.classList.toggle('open');document.querySelectorAll('nav a').forEach(a=>a.onclick=()=>n.classList.remove('open'))}</script></body></html>
+<div class="pressGrid" id="alda-press"></div></section>
+</main><footer><div><b>ALDA</b><p>Împreună pentru o lume mai bună.</p></div><div>Animale • Natură • Oameni • Viitor</div><div>© 2026 ALDA</div></footer><script>
+const b=document.querySelector('.menu'),n=document.querySelector('nav');if(b){b.onclick=()=>n.classList.toggle('open');document.querySelectorAll('nav a').forEach(a=>a.onclick=()=>n.classList.remove('open'))}
+const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+fetch('/content/admin-content.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{
+ const news=document.getElementById('alda-news');
+ news.innerHTML=(d.noutati||[]).map(x=>`<article class="post">${x.imagine?`<img src="${esc(x.imagine)}" alt="">`:''}<div class="inside"><span class="cat">${esc(x.categorie||'Noutate')}</span><h3>${esc(x.titlu)}</h3><p>${esc(x.rezumat)}</p><time>${esc(x.data)}</time></div></article>`).join('')||'<div class="empty">Nu sunt noutăți publicate momentan.</div>';
+ const cases=document.getElementById('alda-cases');
+ cases.innerHTML=(d.justitie||[]).map(x=>`<article class="caseCard"><div class="caseTop"><span class="caseStatus">${esc(x.stadiu)}</span><span>${esc(x.materie||'Informare')}</span></div><h3>${esc(x.dosar)}</h3><dl><div><dt>Instanță</dt><dd>${esc(x.instanta)}</dd></div><div><dt>Obiect</dt><dd>${esc(x.obiect)}</dd></div><div><dt>Autoritate / instituție</dt><dd>${esc(x.autoritate)}</dd></div><div><dt>Data</dt><dd>${esc(x.data)}</dd></div></dl><p class="caseSummary">${esc(x.rezumat)}</p></article>`).join('')||'<div class="empty">Nu sunt informații publicate momentan.</div>';
+ const press=document.getElementById('alda-press');
+ press.innerHTML=(d.comunicate||[]).map(x=>`<article class="pressCard"><div class="pressMeta"><span>${esc(x.tip||'Comunicat')}</span><time>${esc(x.data)}</time></div><h3>${esc(x.titlu)}</h3><p>${esc(x.text)}</p></article>`).join('')||'<div class="empty">Nu sunt comunicate publicate momentan.</div>';
+}).catch(()=>{});
+</script></body></html>

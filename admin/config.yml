@@ -1,0 +1,49 @@
+backend:
+  name: github
+  repo: mirceagj-ui/alda-site
+  branch: main
+
+media_folder: assets/uploads
+public_folder: /assets/uploads
+
+collections:
+  - name: continut_alda
+    label: Conținut ALDA
+    files:
+      - name: continut
+        label: Administrare site
+        file: content/admin-content.json
+        format: json
+        fields:
+          - label: Noutăți
+            name: noutati
+            widget: list
+            summary: "{{fields.data}} — {{fields.titlu}}"
+            fields:
+              - {label: Titlu, name: titlu, widget: string}
+              - {label: Data, name: data, widget: date, format: "DD.MM.YYYY"}
+              - {label: Categorie, name: categorie, widget: string, default: "Noutate"}
+              - {label: Rezumat, name: rezumat, widget: text}
+              - {label: Imagine, name: imagine, widget: image, required: false}
+          - label: Comunicate de presă
+            name: comunicate
+            widget: list
+            summary: "{{fields.data}} — {{fields.titlu}}"
+            fields:
+              - {label: Titlu, name: titlu, widget: string}
+              - {label: Data, name: data, widget: date, format: "DD.MM.YYYY"}
+              - {label: Tip, name: tip, widget: string, default: "Comunicat"}
+              - {label: Text public, name: text, widget: text}
+          - label: Acțiuni în Justiție
+            name: justitie
+            widget: list
+            summary: "{{fields.dosar}} — {{fields.stadiu}}"
+            fields:
+              - {label: Număr dosar, name: dosar, widget: string}
+              - {label: Instanță, name: instanta, widget: string}
+              - {label: Obiect, name: obiect, widget: string}
+              - {label: Autoritate / instituție, name: autoritate, widget: string}
+              - {label: Materie, name: materie, widget: string, required: false}
+              - {label: Stadiu, name: stadiu, widget: string}
+              - {label: Data, name: data, widget: string}
+              - {label: Rezumat public, name: rezumat, widget: text}
