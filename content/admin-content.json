@@ -6,11 +6,6 @@
       "categorie": "Campanie",
       "rezumat": "Aici vor apărea noutățile, acțiunile și campaniile ALDA.",
       "imagine": "/assets/community.png"
-    },
-    {
-      "categorie": "Noutate",
-      "titlu": "Test administrare ALDA",
-      "rezumat": "Acesta este un test al sistemului de administrare ALDA."
     }
   ],
   "comunicate": [
