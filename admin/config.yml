@@ -21,7 +21,7 @@ collections:
             summary: "{{fields.data}} — {{fields.titlu}}"
             fields:
               - {label: Titlu, name: titlu, widget: string}
-              - {label: Data, name: data, widget: datetime, format: "DD.MM.YYYY"}
+              - {label: Data, name: data, widget: date, format: "DD.MM.YYYY"}
               - {label: Categorie, name: categorie, widget: string, default: "Noutate"}
               - {label: Rezumat, name: rezumat, widget: text}
               - {label: Imagine, name: imagine, widget: image, required: false}
@@ -31,7 +31,7 @@ collections:
             summary: "{{fields.data}} — {{fields.titlu}}"
             fields:
               - {label: Titlu, name: titlu, widget: string}
-              - {label: Data, name: data, widget: datetime, format: "DD.MM.YYYY"}
+              - {label: Data, name: data, widget: date, format: "DD.MM.YYYY"}
               - {label: Tip, name: tip, widget: string, default: "Comunicat"}
               - {label: Text public, name: text, widget: text}
           - label: Acțiuni în Justiție
@@ -44,7 +44,6 @@ collections:
               - {label: Obiect, name: obiect, widget: string}
               - {label: Autoritate / instituție, name: autoritate, widget: string}
               - {label: Materie, name: materie, widget: string, required: false}
-              abel: Rezumat public, name: rezumat, widget: text}
-- {label: Stadiu, name: stadiu, widget: string}
-              - {label: Data, name: data, widget: datatime}
-              - {l
+              - {label: Stadiu, name: stadiu, widget: string}
+              - {label: Data, name: data, widget: string}
+              - {label: Rezumat public, name: rezumat, widget: text}
